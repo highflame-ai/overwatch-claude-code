@@ -1,0 +1,45 @@
+{
+  "name": "highflame-overwatch",
+  "owner": {
+    "name": "Highflame",
+    "email": "support@highflame.ai"
+  },
+  "plugins": [
+    {
+      "name": "overwatch-mac",
+      "source": "./overwatch-mac",
+      "version": "0.1.0",
+      "category": "security",
+      "description": "Route Claude Code hook events to Highflame Cerberus for real-time security evaluation (macOS/Linux).",
+      "keywords": [
+        "security",
+        "monitoring",
+        "claude",
+        "code",
+        "mac",
+        "linux",
+        "cerberus",
+        "overwatch",
+        "highflame"
+      ]
+    },
+    {
+      "name": "overwatch-windows",
+      "source": "./overwatch-windows",
+      "version": "0.1.0",
+      "category": "security",
+      "description": "Route Claude Code hook events to Highflame Cerberus for real-time security evaluation (Windows).",
+      "keywords": [
+        "security",
+        "monitoring",
+        "claude",
+        "code",
+        "windows",
+        "powershell",
+        "cerberus",
+        "overwatch",
+        "highflame"
+      ]
+    }
+  ]
+}
