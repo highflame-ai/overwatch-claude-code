@@ -1,0 +1,11 @@
+{
+  "name": "overwatch-mac",
+  "version": "0.1.0",
+  "description": "Highflame Overwatch — Claude Code hook adapter for macOS/Linux. Routes hook events to Cerberus.",
+  "author": {
+    "name": "Highflame",
+    "email": "support@highflame.ai"
+  },
+  "homepage": "https://highflame.ai",
+  "license": "Apache-2.0"
+}
