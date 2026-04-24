@@ -23,6 +23,7 @@ EVENT="${2:-unknown}"
 
 # Read IDE payload from stdin
 payload=$(cat)
+[ -z "$payload" ] && payload="{}"
 
 # Cross-IDE dedup: skip if Cursor fires a non-cursor hook
 if [ "$SOURCE" != "cursor" ] && printf '%s' "$payload" | grep -q '"cursor_version"'; then
@@ -33,7 +34,7 @@ fi
 body=$(printf '{"source":"%s","event":"%s","payload":%s}' "$SOURCE" "$EVENT" "$payload")
 
 # POST to Cerberus with ?format=ide — response is IDE-native format
-response=$(printf '%s' "$body" | curl -s -f -m 10 \
+response=$(printf '%s' "$body" | curl -s -f -m 3 \
     -X POST \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $HIGHFLAME_API_KEY" \

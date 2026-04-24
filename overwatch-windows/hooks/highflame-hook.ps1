@@ -37,7 +37,7 @@ try {
     $resp = Invoke-WebRequest `
         -Uri "$BaseUrl/v1/hooks/evaluate?format=ide" `
         -Method Post `
-        -TimeoutSec 10 `
+        -TimeoutSec 3 `
         -Headers @{ "Authorization" = "Bearer $ApiKey" } `
         -ContentType "application/json" `
         -Body $body `
