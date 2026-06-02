@@ -11,12 +11,13 @@ This is the **daemon-less** install path: no local process, no background servic
 | `overwatch-mac`     | macOS / Linux |
 | `overwatch-windows` | Windows       |
 
-Each plugin wires the same Claude Code hook events and forwards them to `POST /v1/hooks/evaluate?format=ide` on Cerberus:
+Each plugin wires the same Claude Code hook events and forwards them to `POST /v1/cerberus/hooks/evaluate?format=ide` on Cerberus:
 
 - `PreToolUse` (matcher `.*`) — gate tool calls before execution
 - `PostToolUse` (matcher `.*`) — audit after tool completes
 - `UserPromptSubmit` — inspect user prompts
 - `SessionStart` — session-level context
+- `SubagentStart`, `SubagentStop` — delegated subagent lifecycle
 - `Stop` — agent stop signal
 - `Notification` — Claude Code notifications (e.g. permission prompts)
 

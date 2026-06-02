@@ -39,7 +39,7 @@ response=$(printf '%s' "$body" | curl -s -f -m 3 \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $HIGHFLAME_API_KEY" \
     -d @- \
-    "$HIGHFLAME_URL/v1/hooks/evaluate?format=ide" 2>/dev/null) || true
+    "$HIGHFLAME_URL/v1/cerberus/hooks/evaluate?format=ide" 2>/dev/null) || true
 
 # Fail-open: curl failure or empty response → allow
 if [ -z "$response" ]; then

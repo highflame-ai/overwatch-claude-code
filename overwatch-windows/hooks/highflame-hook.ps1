@@ -35,7 +35,7 @@ $body = '{"source":"' + $Source + '","event":"' + $Event + '","payload":' + $pay
 
 try {
     $resp = Invoke-WebRequest `
-        -Uri "$BaseUrl/v1/hooks/evaluate?format=ide" `
+        -Uri "$BaseUrl/v1/cerberus/hooks/evaluate?format=ide" `
         -Method Post `
         -TimeoutSec 3 `
         -Headers @{ "Authorization" = "Bearer $ApiKey" } `
