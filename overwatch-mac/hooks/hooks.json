@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh ${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh claudecode PreToolUse"
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode PreToolUse"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh ${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh claudecode PostToolUse"
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode PostToolUse"
           }
         ]
       }
@@ -27,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh ${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh claudecode UserPromptSubmit"
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode UserPromptSubmit"
           }
         ]
       }
@@ -37,7 +37,27 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh ${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh claudecode SessionStart"
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode SessionStart"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode SubagentStart"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode SubagentStop"
           }
         ]
       }
@@ -47,7 +67,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh ${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh claudecode Stop"
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode Stop"
           }
         ]
       }
@@ -57,7 +77,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh ${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh claudecode Notification"
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/highflame-hook.sh\" claudecode Notification"
           }
         ]
       }
